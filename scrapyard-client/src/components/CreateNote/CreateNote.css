@@ -1,0 +1,36 @@
+.note-container {
+    background-color: #EFEFEF;
+}
+
+textarea {
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    border-width: 0px;
+    resize: none !important;
+    height: 50px;
+}
+
+.noteText {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    resize: none;
+    min-height: 400px;
+}
+
+.noteText[contenteditable]:empty::before {
+    content: "Note";
+    color: gray;
+}
+
+textarea,
+.noteText:focus {
+    outline: 1px solid #C2C2C2;
+}

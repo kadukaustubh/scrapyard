@@ -1,0 +1,17 @@
+.login-container {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    animation: blur-in 0.3s;
+}
+
+
+.login-form {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px #ccc);
+    animation: drop-shadow 0.3s;
+}

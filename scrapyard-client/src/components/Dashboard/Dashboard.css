@@ -1,0 +1,18 @@
+.note-prev {
+    height: 20rem;
+    width: 15rem;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.note-block a {
+    text-decoration: none;
+    color: black;
+}
+
+.note-del img {
+    height: 20px;
+    width: 20px;
+}
