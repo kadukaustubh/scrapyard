@@ -12,9 +12,11 @@ function Dashboard() {
     const [isBusy, setBusy] = useState(true);
     const [list, setList] = useState([]);
     const [refresh, setRefresh] = useState(false);
+    const userId = localStorage.getItem('userId');
 
     useEffect(() => {
         const isUser = localStorage.getItem('authenticated');
+
         if (isUser) {
             setBusy(false);
             axios.get('http://localhost:5000/dashboard')
@@ -56,23 +58,29 @@ function Dashboard() {
                         <Button onClick={createNote}>Create Note</Button>
                     </div>
                     <div className='notes-grid d-flex flex-wrap flex-md-row flex-column w-100 justify-content-center align-items-center'>
-                        {list.map((item) => {
-                            return (
-                                <div className='d-flex flex-column note-block m-4' key={item._id}>
-                                    <Link className='note-prev p-2' to={`/edit/${item._id}`}>
-                                        {item.note}
-                                    </Link>
-                                    <div className='d-flex justify-content'>
-                                        <Link className='note-title d-flex my-2 justify-content-between align-items-center'>
-                                            {item.title}
-                                        </Link>
-                                        <div className='note-del d-flex'>
-                                            <img onClick={() => deleteNote(item._id)} src={Img} alt='bin' />
+                        {list ? (
+                            list.map((item) => {
+                                if (item.userId === userId) {
+                                    return (
+                                        <div className='d-flex flex-column note-block m-4' key={item._id}>
+                                            <Link className='note-prev p-2' to={`/edit/${item._id}`}>
+                                                {item.note}
+                                            </Link>
+                                            <div className='d-flex w-100 justify-content-between align-items-center'>
+                                                <Link className='note-title d-flex my-2 justify-content-between align-items-center'>
+                                                    {item.title}
+                                                </Link>
+                                                <div className='note-del d-flex'>
+                                                    <img onClick={() => deleteNote(item._id)} src={Img} alt='bin' />
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
+                                    )
+                                }
+                            })
+                        ) : (
+                            ''
+                        )}
                     </div>
                 </div>
             )}

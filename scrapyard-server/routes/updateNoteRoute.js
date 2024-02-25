@@ -3,6 +3,7 @@ let Note = require('../models/notesModel');
 
 router.route('/').post((request, response) => {
     const newNote = new Note({
+        userId: request.body.userId,
         title: request.body.title,
         note: request.body.note,
     });

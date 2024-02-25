@@ -37,6 +37,7 @@ router.route('/').post((request, response) => {
                     //   return success response
                     response.status(200).send({
                         message: "Login Successful",
+                        id: user._id,
                         email: user.email,
                         token,
                     });

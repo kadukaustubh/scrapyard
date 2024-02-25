@@ -12,6 +12,7 @@ function Header() {
     const signOutHandler = (e) => {
         e.preventDefault();
         localStorage.removeItem('authenticated');
+        localStorage.removeItem('userId');
         navigate('/');
     }
 

@@ -37,6 +37,7 @@ function Login(props) {
             .then((result) => {
                 console.log(result);
                 localStorage.setItem('authenticated', true);
+                localStorage.setItem('userId', result.data.id);
                 setTimeout(() => {
                     navigate('/dashboard');
                 }, 2000);

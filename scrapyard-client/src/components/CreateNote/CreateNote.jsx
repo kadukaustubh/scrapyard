@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../Header/Header';
@@ -11,6 +11,7 @@ function CreateNote() {
     const navigate = useNavigate();
     const [title, setTitle] = useState('');
     const [note, setNote] = useState('');
+    const userId = localStorage.getItem('userId');
 
     const discard = () => {
         navigate('/dashboard');
@@ -20,6 +21,7 @@ function CreateNote() {
         method: "post",
         url: "http://localhost:5000/update",
         data: {
+            userId,
             title,
             note,
         },
@@ -29,6 +31,7 @@ function CreateNote() {
         axios(configuration)
             .then((result) => {
                 console.log(result);
+                navigate('/dashboard');
             })
             .catch((error) => {
                 console.log(error);
