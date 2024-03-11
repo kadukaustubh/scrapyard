@@ -16,10 +16,14 @@ function Header() {
         navigate('/');
     }
 
+    const gotoDash = () => {
+        navigate('/dashboard');
+    }
+
     return (
         <Navbar expand="lg" className="nav w-100 px-5">
             <Container fluid>
-                <Navbar.Brand href="/dashboard">Dashboard</Navbar.Brand>
+                <Navbar.Brand onClick={gotoDash}>Dashboard</Navbar.Brand>
                 <Nav className="d-flex">
                     <Nav.Link onClick={signOutHandler}>Sign Out</Nav.Link>
                 </Nav>
