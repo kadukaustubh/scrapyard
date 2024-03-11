@@ -19,7 +19,7 @@ function CreateNote() {
 
     const configuration = {
         method: "post",
-        url: "http://localhost:5000/update",
+        url: "https://scrapyard-server.onrender.com/update",
         data: {
             userId,
             title,

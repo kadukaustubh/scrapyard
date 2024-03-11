@@ -55,7 +55,7 @@ function Register(props) {
 
     const configuration = {
         method: "post",
-        url: "http://localhost:5000/register",
+        url: "https://scrapyard-server.onrender.com/register",
         data: {
             name,
             email,

@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Button from 'react-bootstrap/esm/Button';
 import Header from '../Header/Header';
 import './Dashboard.css';
 import Img from '../../assets/bin.png';
@@ -19,7 +18,7 @@ function Dashboard() {
 
         if (isUser) {
             setBusy(false);
-            axios.get('http://localhost:5000/dashboard')
+            axios.get('https://scrapyard-server.onrender.com/dashboard')
                 .then((res) => {
                     setList(res.data);
                 })
@@ -37,7 +36,7 @@ function Dashboard() {
     }
 
     const deleteNote = (id) => {
-        axios.delete(`http://localhost:5000/update/${id}`)
+        axios.delete(`https://scrapyard-server.onrender.com/update/${id}`)
             .then((res) => {
                 console.log(res);
                 setRefresh(true);

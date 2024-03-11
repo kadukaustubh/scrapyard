@@ -41,7 +41,6 @@ function Landing() {
                 </div>
                 <div className='slider d-flex flex-column w-md-50 w-100 align-items-center'>
                     <span>~ Jot down the next big thing ~</span>
-                    {/* <img className='img-style' src={Img1} alt='editor preview' /> */}
                     <CarouselFade />
                 </div>
             </div>

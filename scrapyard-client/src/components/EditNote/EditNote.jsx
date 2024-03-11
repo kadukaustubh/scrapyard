@@ -14,7 +14,7 @@ function EditNote() {
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/update/${id}`)
+        axios.get(`https://scrapyard-server.onrender.com/update/${id}`)
             .then((res) => {
                 setList(res.data);
             })
@@ -31,7 +31,7 @@ function EditNote() {
 
     const configuration = {
         method: "post",
-        url: `http://localhost:5000/update/${id}`,
+        url: `https://scrapyard-server.onrender.com/update/${id}`,
         data: {
             id,
             title,

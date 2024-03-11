@@ -24,7 +24,7 @@ function Login(props) {
 
     const configuration = {
         method: "post",
-        url: "http://localhost:5000/login",
+        url: "https://scrapyard-server.onrender.com/login",
         data: {
             email,
             password,
