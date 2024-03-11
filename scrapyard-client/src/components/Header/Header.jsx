@@ -23,7 +23,7 @@ function Header() {
     return (
         <Navbar expand="lg" className="nav w-100 px-5">
             <Container fluid>
-                <Navbar.Brand onClick={gotoDash}>Dashboard</Navbar.Brand>
+                <Navbar.Brand className='navBrand' onClick={gotoDash}>Dashboard</Navbar.Brand>
                 <Nav className="d-flex">
                     <Nav.Link onClick={signOutHandler}>Sign Out</Nav.Link>
                 </Nav>
