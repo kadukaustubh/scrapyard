@@ -8,9 +8,35 @@ function Register(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
-    const [passMatch, setPassMatch] = useState('')
+    const [passMatch, setPassMatch] = useState('');
+    const [emailError, setEmailError] = useState(null);
+    const [passError, setPassError] = useState(null);
 
     let registerRef = useRef();
+
+    function isValidEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
+    }
+
+    const handleEmailChange = event => {
+        if (!isValidEmail(event.target.value)) {
+            setEmailError('Email is invalid');
+        } else {
+            setEmailError(null);
+        }
+
+        setEmail(event.target.value);
+    };
+
+    const handlePasswordChange = event => {
+        if ((event.target.value).length < 8) {
+            setPassError('Password is invalid');
+        } else {
+            setPassError(null);
+        }
+
+        setPassword(event.target.value);
+    };
 
     const resetForm = () => {
         setName('');
@@ -63,8 +89,10 @@ function Register(props) {
                 <h3>Register</h3>
                 <form className='d-flex flex-column' onSubmit={(e) => handleSubmit(e)}>
                     <input className='my-2 p-2' type='text' name='name' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} required />
-                    <input className='my-2 p-2' type='text' name='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
-                    <input className='my-2 p-2' type='password' name='password' value={password} placeholder='Password' onChange={(e) => setPassword(e.target.value)} required />
+                    <input className='my-2 p-2' type='text' name='email' placeholder='Email' value={email} onChange={handleEmailChange} required />
+                    {emailError && <span>{emailError}</span>}
+                    <input className='my-2 p-2' type='password' name='password' value={password} placeholder='Password' onChange={handlePasswordChange} required />
+                    {passError && <span>{passError}</span>}
                     <input className='my-2 p-2' type='password' name='confirm' value={confirmPass} placeholder='Confirm Password' onChange={(e) => setConfirmPass(e.target.value)} required />
                     {passMatch ? (
                         <span>{passMatch}</span>

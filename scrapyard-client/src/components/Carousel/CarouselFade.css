@@ -1,0 +1,12 @@
+.carousel {
+    z-index: -5;
+    width: 25rem;
+}
+
+.img-style {
+    height: 25rem;
+    width: 25rem;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #d9d9d9;
+}

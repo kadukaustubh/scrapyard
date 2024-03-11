@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Landing.css';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
-import Img1 from '../../assets/gradient.jpg';
+import CarouselFade from '../Carousel/CarouselFade'
 
 function Landing() {
     const [loginPopup, setLoginPopup] = useState(false);
@@ -41,7 +41,8 @@ function Landing() {
                 </div>
                 <div className='slider d-flex flex-column w-md-50 w-100 align-items-center'>
                     <span>~ Jot down the next big thing ~</span>
-                    <img className='img-style' src={Img1} alt="gradient" />
+                    {/* <img className='img-style' src={Img1} alt='editor preview' /> */}
+                    <CarouselFade />
                 </div>
             </div>
             <div className='footer d-flex align-items-end'>

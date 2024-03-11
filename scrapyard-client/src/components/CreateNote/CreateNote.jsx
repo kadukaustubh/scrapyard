@@ -28,14 +28,16 @@ function CreateNote() {
     };
 
     const handleSubmit = (e) => {
-        axios(configuration)
-            .then((result) => {
-                console.log(result);
-                navigate('/dashboard');
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        if (title && note) {
+            axios(configuration)
+                .then((result) => {
+                    console.log(result);
+                    navigate('/dashboard');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
     }
 
     return (

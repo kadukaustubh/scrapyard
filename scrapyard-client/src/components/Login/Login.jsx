@@ -7,6 +7,7 @@ function Login(props) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loginError, setLoginError] = useState(null);
 
     let loginRef = useRef();
     const handler = (e) => {
@@ -38,6 +39,7 @@ function Login(props) {
                 console.log(result);
                 localStorage.setItem('authenticated', true);
                 localStorage.setItem('userId', result.data.id);
+                setLoginError(null)
                 setTimeout(() => {
                     navigate('/dashboard');
                 }, 2000);
@@ -45,6 +47,7 @@ function Login(props) {
             .catch((error) => {
                 console.log(error);
                 resetForm();
+                setLoginError('Invalid credentials! Try again.');
             });
     }
 
@@ -55,6 +58,7 @@ function Login(props) {
                 <form className='d-flex flex-column' onSubmit={(e) => handleSubmit(e)}>
                     <input className='my-2 p-2' type='text' name='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
                     <input className='my-2 p-2' type='password' name='password' value={password} placeholder='Password' onChange={(e) => setPassword(e.target.value)} required />
+                    {loginError && <span>{loginError}</span>}
                 </form>
                 <div className='btn-group d-flex justify-content-end my-2'>
                     <button className='submit-btn py-1 px-2' onClick={(e) => handleSubmit(e)}>Submit</button>

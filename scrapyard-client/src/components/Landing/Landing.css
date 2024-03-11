@@ -23,13 +23,6 @@
     font-size: 1.5rem;
 }
 
-.img-style {
-    height: 25rem;
-    width: 25rem;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
 .btn-signup,
 .btn-login {
     width: 150px;

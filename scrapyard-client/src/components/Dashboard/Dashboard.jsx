@@ -55,7 +55,7 @@ function Dashboard() {
             ) : (
                 <div className='d-flex flex-column justify-content-center align-items-center p-md-5 p-3'>
                     <div className='add-btn mb-5'>
-                        <Button onClick={createNote}>Create Note</Button>
+                        <button className='create-btn' onClick={createNote}>Create Note</button>
                     </div>
                     <div className='notes-grid d-flex flex-wrap flex-md-row flex-column w-100 justify-content-center align-items-center'>
                         {list ? (
