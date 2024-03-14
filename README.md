@@ -2,7 +2,7 @@
 <ul>
   <li>
   <h3>Landing Screen</h3>
-  <img height="200" src="https://raw.githubusercontent.com/kadukaustubh/scrapyard/830deb66791e4efbe1ff9074e05fd53c0f247b40/scrap-ss/landing.PNG"/>
+  <img height="200" src="https://github.com/kadukaustubh/scrapyard/blob/64ea294a049623223af66413156072c61cca3ab3/scrap-ss/landing.PNG"/>
   </li>
   <li>
   <h3>Dashboard Screen</h3>
@@ -10,11 +10,11 @@
   </li>
   <li>
   <h3>Login Popup</h3>
-  <img height="200" src="https://raw.githubusercontent.com/kadukaustubh/scrapyard/830deb66791e4efbe1ff9074e05fd53c0f247b40/scrap-ss/login.PNG"/>
+  <img height="200" src="https://github.com/kadukaustubh/scrapyard/blob/64ea294a049623223af66413156072c61cca3ab3/scrap-ss/login.PNG"/>
   </li>
   <li>
   <h3>Register Popup</h3>
-  <img height="200" src="https://raw.githubusercontent.com/kadukaustubh/scrapyard/830deb66791e4efbe1ff9074e05fd53c0f247b40/scrap-ss/register.PNG"/>
+  <img height="200" src="https://github.com/kadukaustubh/scrapyard/blob/64ea294a049623223af66413156072c61cca3ab3/scrap-ss/register.PNG"/>
   </li>
   <li>
   <h3>Create Note</h3>
