@@ -35,7 +35,7 @@ function Landing() {
                         </div>
                     ) : (
                         <div className='form-btns d-flex flex-md-column flex-row'>
-                            <Link to='/dashboard' className='d-flex justify-content-center btn-signup mt-2 mx-md-0 mx-2'><span>Go to Dashboard</span></Link>
+                            <Link to='/dashboard' className='d-flex justify-content-center btn-signup mt-2 mx-md-0 mx-2'><span className='dash-btn'>Go to Dashboard</span></Link>
                         </div>
                     )}
                 </div>

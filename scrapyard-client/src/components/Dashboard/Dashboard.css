@@ -1,23 +1,32 @@
+* {
+    font-family: "Nunito", sans-serif;
+}
+
 .create-btn {
-    border: 2px solid #D9D9D9;
+    border: 2px solid #C2C2C2;
     border-radius: 10px;
-    background-color: #D9D9D9;
+    background-color: #fff;
     text-decoration: none;
-    color: #000;
+    color: #303030;
+    font-weight: 800;
 }
 
 .note-prev {
     height: 20rem;
     width: 15rem;
     object-fit: cover;
-    border: 2px solid #ccc;
+    border: 2px solid #C2C2C2;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .note-block a {
     text-decoration: none;
-    color: black;
+    color: #303030;
+}
+
+.note-title {
+    font-weight: 600;
 }
 
 .note-del img {

@@ -12,6 +12,7 @@
 .logo h1 {
     font-size: 2rem;
     text-decoration: underline;
+    color: #303030;
 }
 
 .main {
@@ -21,6 +22,7 @@
 
 .heading h1 {
     font-size: 1.5rem;
+    color: #303030;
 }
 
 .btn-signup,
@@ -32,14 +34,18 @@
 }
 
 .btn-signup {
-    color: #000;
+    color: #303030;
     border: 2px solid #D9D9D9;
 }
 
 .btn-login {
-    color: #000;
+    color: #303030;
     border: 2px solid #D9D9D9;
     background-color: #D9D9D9;
+}
+
+.dash-btn {
+    font-weight: 800;
 }
 
 .footer {

@@ -54,7 +54,7 @@ function CreateNote() {
                 </div>
             </div>
             <div className='editor d-flex flex-column w-100 p-5'>
-                <textarea className='titleText' maxLength={15} placeholder='Title'
+                <textarea className='titleText' maxLength={30} placeholder='Title'
                     onChange={(e) => { setTitle(e.target.value) }}></textarea>
                 <span className='noteText mt-3' role='textbox' contentEditable
                     onInput={(e) => {

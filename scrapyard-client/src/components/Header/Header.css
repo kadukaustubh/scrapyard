@@ -5,3 +5,7 @@
 .navBrand:hover {
     cursor: pointer;
 }
+
+.signout-btn {
+    color: #303030;
+}

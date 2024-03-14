@@ -25,7 +25,7 @@ function Header() {
             <Container fluid>
                 <Navbar.Brand className='navBrand' onClick={gotoDash}>Dashboard</Navbar.Brand>
                 <Nav className="d-flex">
-                    <Nav.Link onClick={signOutHandler}>Sign Out</Nav.Link>
+                    <Nav.Link className='signout-btn' onClick={signOutHandler}>Sign Out</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
